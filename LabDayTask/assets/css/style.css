@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+/*Edit starts here*/
+li {
+  position: relative;
+}
+
+li::after {
+  content: '';
+  display: block;
+  width: 0;
+  position: absolute;
+  left: 0%;
+  height: 2px;
+  background: #106eea;
+  -webkit-transition: cubic-bezier(0.77, 0, 0.18, 1) 0.6s;
+  transition: cubic-bezier(0.77, 0, 0.18, 1) 0.6s;
+}
+
+li:hover::after {
+  width: 100%;
+  left: 0%;
+}
+
+.container-fluid {
+  background-color: #fff;
+}
+
+.container-fluid a {
+  color: #111;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 28px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+          box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-weight: 400;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #106eea;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+.myButton {
+  background-color: #106eea;
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 8px 26px;
+  text-decoration: none;
+}
+
+.myButton:hover {
+  opacity: 95%;
+  color: white;
+}
+
+.glightbox:hover {
+  opacity: 95%;
+}
+
+.glightbox {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 8px 26px;
+  text-decoration: none;
+}
+
+.glightbox i {
+  color: #106eea;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-right: 7px;
+}
+
+#hero {
+  background-image: url(https://i.ibb.co/M2SHNJG/hero.png);
+  height: 550px;
+  background-attachment: fixed;
+}
+
+.texts {
+  margin-top: 200px;
+}
+
+.texts h1 {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.texts span {
+  color: #106eea;
+}
+
+.texts h2 {
+  font-size: 16px;
+}
+
+#featured-services {
+  margin: 4rem 0rem;
+}
+
+#featured-services .icon-box:hover {
+  bottom: 0;
+}
+
+#featured-services .icon-box {
+  overflow: hidden;
+  height: 250px;
+  margin-bottom: 1rem;
+  padding: 30px;
+  -webkit-box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+          box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+#featured-services .icon-box::before {
+  content: " ";
+  position: absolute;
+  background-color: #106eea;
+  left: 0;
+  bottom: -100%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#featured-services .icon-box:hover::before {
+  bottom: 0;
+  border-radius: 0px;
+}
+
+#featured-services .icon {
+  margin-bottom: 15px;
+}
+
+#featured-services .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: #106eea;
+}
+
+#featured-services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#featured-services .title a {
+  color: #111;
+  text-decoration: none;
+}
+
+#featured-services .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+#featured-services .icon-box:hover .title a, #featured-services .featured-services .icon-box:hover .description {
+  color: #fff;
+}
+
+#featured-services .icon-box:hover .icon i {
+  color: #fff;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=style.css.map */
